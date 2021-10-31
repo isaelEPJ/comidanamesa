@@ -1,0 +1,13 @@
+@media screen and (min-width: 400) {
+  nav {
+    width: 100px;
+    background-color: #777;
+  }
+}
+@media (min-width: 375) {
+  btn btn-light,
+  btn btn-outline-light {
+    display: flex;
+    background-color: #777;
+  }
+}

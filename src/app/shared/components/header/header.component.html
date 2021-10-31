@@ -1,0 +1,93 @@
+<nav
+  class="navbar navbar-expand-lg mt-2 mt-md-0 ms-md-auto"
+  style="background-color: #dd5957; padding: 0; margin: 0"
+>
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container-fluid justify-content-start">
+      <a class="navbar-brand" href="#" style="padding: 0">
+        <img
+          src=".\assets\images\logo.png"
+          alt="Logo"
+          width="70"
+          height="70"
+          style="object-fit: cover; margin: 0; padding: 0"
+        />
+      </a>
+    </div>
+    <ng-container *ngIf="!currentUser">
+      <button
+        type="button"
+        class="btn btn-light"
+        style="margin: 0 1em"
+        routerLink="/login"
+      >
+        Entrar
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-light"
+        style="margin: 0 1em"
+        routerLink="/register-option"
+      >
+        Registrar-se
+      </button>
+    </ng-container>
+    <div *ngIf="currentUser" style="width: 25%">
+      <h5>{{ titleHeader! }}</h5>
+      <h5 style="color: aliceblue">
+        Seja bem vindo(a), {{ currentUser.name }}
+      </h5>
+      <div
+        class="container-fluid"
+        style="
+          width: 50%;
+          justify-content: space-around;
+          display: flex;
+          flex-direction: row;
+        "
+      >
+        <button
+          *ngIf="currentUser.typeUser == 'usuario'"
+          style="background-color: transparent; border: none; cursor: pointer"
+          routerLink="/usuario/painel"
+        >
+          <img src="https://img.icons8.com/material/24/000000/home--v5.png" />
+        </button>
+        <button
+          *ngIf="currentUser.typeUser == 'gestor'"
+          style="background-color: transparent; border: none; cursor: pointer"
+          routerLink="/gestor/painel"
+        >
+          <img src="https://img.icons8.com/material/24/000000/home--v5.png" />
+        </button>
+        <button
+          *ngIf="currentUser.typeUser == 'empresa'"
+          style="background-color: transparent; border: none; cursor: pointer"
+          routerLink="/empresa/painel"
+        >
+          <img src="https://img.icons8.com/material/24/000000/home--v5.png" />
+        </button>
+        <button
+          style="background-color: transparent; border: none; cursor: pointer"
+          (click)="signOut()"
+        >
+          <img
+            src="https://img.icons8.com/external-those-icons-fill-those-icons/24/000000/external-exit-wayfinding-those-icons-fill-those-icons-2.png"
+          />
+        </button>
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</nav>

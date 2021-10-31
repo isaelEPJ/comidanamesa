@@ -1,0 +1,64 @@
+<div
+  class="container-fluid position-static"
+  style="
+    align-self: center;
+    max-width: 40%;
+    margin-top: 7%;
+    margin-bottom: 20%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 5% 4%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px 1px gray;
+  "
+>
+  <h3 class="text-center">Selecione o tipo de cadastro</h3>
+  <br /><br />
+
+  <div
+    class="mb-3 row"
+    style="
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+    "
+  >
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      style="width: 70%"
+      [routerLink]="['/register', 'usuario']"
+    >
+      Sou Usuário
+    </button>
+    <br />
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      style="width: 70%"
+      [routerLink]="['/register', 'gestor']"
+    >
+      Sou Gestor
+    </button>
+    <br />
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      style="width: 70%"
+      [routerLink]="['/register', 'empresa']"
+    >
+      Sou Empresa
+    </button>
+    <br />
+    <button
+      class="btn btn-primary"
+      type="button"
+      routerLink="/home"
+      style="background-color: #dd5957; width: 70%; align-self: center"
+    >
+      Voltar
+    </button>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,300 @@
+<app-header></app-header>
+
+<div
+  class="container-fluid"
+  style="
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  "
+>
+  <div
+    class="d-flex flex-column flex-shrink-0 p-3 text-white"
+    style="width: 280px; height: 60em; background-color: #0e8282; margin: 0px"
+  >
+    <a
+      class="
+        d-flex
+        align-items-center
+        mb-3 mb-md-0
+        me-md-auto
+        text-white text-decoration-none
+      "
+    >
+      <div style="width: 40px"></div>
+      <img
+        style="width: 10em; height: 10em; border-radius: 50%; padding: 0"
+        src="{{ user?.imageUrl }}"
+        class="img-fluid"
+        alt="..."
+      />
+    </a>
+    <hr />
+    <h4 style="align-self: center">{{ user?.name }}</h4>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <div style="border-top: solid 1px #0c6969"></div>
+
+      <li style="align-items: center; margin: 0.3em 0; font-size: 20px">
+        <a href="#" class="nav-link text-white" routerLink="/empresa/perfil">
+          Meus dados
+        </a>
+      </li>
+      <div style="border-top: solid 1px #0c6969"></div>
+
+      <li style="align-items: center; margin: 0.3em 0; font-size: 20px">
+        <a href="#" class="nav-link text-white" routerLink="">
+          Agendamentos de entregas</a
+        >
+      </li>
+      <div style="border-top: solid 1px #0c6969"></div>
+      <li style="align-items: center; margin: 0.3em 0; font-size: 20px">
+        <a href="#" class="nav-link text-white" routerLink="">
+          Agendamentos de retiradas
+        </a>
+      </li>
+      <div style="border-top: solid 1px #0c6969"></div>
+    </ul>
+    <hr />
+  </div>
+  <div class="container-fluid" style="display: flex; flex-direction: column">
+    <div class="container-fluid">
+      <h5 style="margin: 3% 1%; color: #0e8282">Editar perfil</h5>
+
+      <div class="container-fluid">
+        <h5 style="margin: 3% 1%; color: #0e8282">Dados Cadastrais</h5>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Razao social"
+            aria-label="Razao social"
+            style="margin: 0 1%"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nome fantasia"
+            aria-label="Nome fantasia"
+            style="margin: 0 1%"
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="CNPJ"
+            aria-label="CNPJ"
+            style="margin: 0 1%"
+          />
+          <input
+            type="date"
+            class="form-control"
+            placeholder="Data de nascimento"
+            aria-label="date"
+            style="margin: 0 1%"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Endereco"
+            aria-label="Endereco"
+            style="margin: 0 1%"
+          />
+          <input
+            type="number"
+            class="form-control"
+            placeholder="DDD + celular"
+            aria-label="phone"
+            style="margin: 0 1%"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Bairro"
+            aria-label="Bairro"
+            style="margin: 0 1%"
+          />
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Numero"
+            aria-label="Numero"
+            style="margin: 0 1%"
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="CEP"
+            aria-label="CEP"
+            style="margin: 0 1%"
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Complemento"
+            aria-label="Complemento"
+            style="margin: 0 1%"
+          />
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <h5 style="margin: 3% 1%; color: #0e8282">Dados do Responsável</h5>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nome Completo"
+            aria-label="Nome"
+            style="margin: 0 1%"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="CPF"
+            aria-label="CPF"
+            style="margin: 0 1%"
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="RG"
+            aria-label="RG"
+            style="margin: 0 1%"
+          />
+          <input
+            type="date"
+            class="form-control"
+            placeholder="Data de nascimento"
+            aria-label="date"
+            style="margin: 0 1%"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Endereco"
+            aria-label="Endereco"
+            style="margin: 0 1%"
+          />
+          <input
+            type="number"
+            class="form-control"
+            placeholder="DDD + celular"
+            aria-label="phone"
+            style="margin: 0 1%"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Bairro"
+            aria-label="Bairro"
+            style="margin: 0 1%"
+          />
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Numero"
+            aria-label="Numero"
+            style="margin: 0 1%"
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="CEP"
+            aria-label="CEP"
+            style="margin: 0 1%"
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Complemento"
+            aria-label="Complemento"
+            style="margin: 0 1%"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Qual cargo você ocupa?"
+            aria-label="Quantas pessoas moram com voce?"
+            style="margin: 0 1%"
+          />
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div
+          class="input-group mb-3"
+          style="justify-content: space-around; margin: 2% 0 0 0"
+        >
+          <button type="button" class="btn btn-link" style="color: #0e8282">
+            Anexar ultima alteraçao do cadastro social
+          </button>
+          <button type="button" class="btn btn-link" style="color: #0e8282">
+            Anexar foto de perfil
+          </button>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <h5 style="margin: 3% 1%; color: #0e8282">Dados do login</h5>
+        <div class="input-group mb-3">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="E-mail"
+            aria-label="E-mail"
+            style="margin: 0 1%"
+          />
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Senha"
+            aria-label="Senha"
+            style="margin: 0 1%"
+          />
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Repetir senha"
+            aria-label="Senha"
+            style="margin: 0 1%"
+          />
+        </div>
+        <div class="container-fluid" style="padding: 1em 2% 0 0">
+          <div class="mb-3 row" style="justify-content: flex-end">
+            <!-- <div style="width: 40%"></div> -->
+            <button
+              class="btn btn-primary"
+              type="button"
+              routerLink="/register-option"
+              style="background-color: #dd5957; width: 15%; margin-right: 2%"
+            >
+              Voltar
+            </button>
+            <button
+              class="btn btn-primary"
+              type="button"
+              style="background-color: #0e8282; width: 15%; right: 2em"
+            >
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="height: 10%"></div>
+    </div>
+    <div class="container" style="height: 10%"></div>
+  </div>
+</div>

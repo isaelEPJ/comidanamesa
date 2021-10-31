@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<div
+  class="container-fluid"
+  style="
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+  "
+>
+<div
+  class="d-flex flex-column flex-shrink-0 p-3 text-white"
+  style="width: 280px; height: 38em; background-color: #0e8282; margin: 0px"
+>
+  <a
+    class="
+      d-flex
+      align-items-center
+      mb-3 mb-md-0
+      me-md-auto
+      text-white text-decoration-none
+    "
+  >
+    <div style="width: 40px"></div>
+    <img
+      style="width: 10em; height: 10em; border-radius: 50%; padding: 0"
+      src="{{ user?.imageUrl }}"
+      class="img-fluid"
+      alt="..."
+    />
+  </a>
+  <hr />
+  <h4 style="align-self: center">{{ user?.name }}</h4>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <div style="border-top: solid 1px #0c6969"></div>
+
+    <li style="align-items: center; margin: 0.3em 0; font-size: 20px">
+      <a href="#" class="nav-link text-white" routerLink="/empresa/perfil"> Meus dados </a>
+    </li>
+    <div style="border-top: solid 1px #0c6969"></div>
+
+    <li style="align-items: center; margin: 0.3em 0; font-size: 20px">
+      <a href="#" class="nav-link text-white"> Agendamentos </a>
+    </li>
+    <div style="border-top: solid 1px #0c6969"></div>
+    <li style="align-items: center; margin: 0.3em 0; font-size: 20px">
+      <a href="#" class="nav-link text-white"> Historico </a>
+    </li>
+    <div style="border-top: solid 1px #0c6969"></div>
+  </ul>
+  <hr />
+</div>
+  <app-painel-empresa-component></app-painel-empresa-component>
+</div>
